@@ -1,6 +1,6 @@
 ---
 title: 'Homework 2'
-author: "Your Name"
+author: "Zach Josten"
 date: "2/2/2022"
 output: html_document
 ---
@@ -9,24 +9,46 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#### Due: 2/9/2022 before 11:59pm. Submit in Canvas (file upload).
+#### Due: 2/9/2022 before 11:59pm. Submit in Canvas (file upload).  
 
-1. Finish the in-class practice in Slides 3-12 in "Lecture 2-2-Practice for git", link: https://yumouqiu.github.io/DS202-Spring2022/Practice/practice01.html  
-    a. Download the RMarkdown file with these homework instructions to use as a template for your work. Make sure to replace "Your Name" with your name.  
-    b. In the RMarkdown file, write down table of team members, and their github repository links;   
-the number of successful pull requests you made, and the github repository to which you requested a change;  
-the number of pull requests you accepted, and the github repository from which you accepted.  
-    c. Write down a list with at least 3 tips of how to make working with git/github easier  
+1.\
+Zach Josten - <https://github.com/ZachJosten/Homework2-ZJ>\
+\
+Craig Orman - <>\
+\
+Number of pull requests made - \
+Requests made to - <>\
+\
+Number of pull requests accepted - \
+Requests accepted from - <>\
+\
+Tips for Git/Github  
+1. If working on a fork, make sure to fetch upstream before you start working on the fork in case changes were made.  
+2. Adding comments on a commit or pull request can help when trying to keep track of changes made.  
+3. It is important to pull from the repository before working on something.  
 
-2. Generate the graph of LifExp vs. gdpPercap for US, Canada (fixed data) and Australia by RMarkdown based on the data set "gapminder-5060", like what we did in the class.  
-Please use Github to collaborate on this problem. For example, one member can create the plot of US in his/her repository. The other member will fork this repository, add the result for the second country, and make a pull request for merging into the main repository. Each member should at least analyze one country and make at least one pull request. **Please submit the RMarkdown file, the output file, and the screen shot of the successful pull request and the merge.**
 
-3. Write a paragraph (~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least 
-    a. one link to a chart or an image and 
-    b. at least one itemized or enumerated list.
     
 
-Note: your submission is supposed to be fully reproducible, i.e. the TA and I will 'knit' your submission in RStudio. Including the link to the image is the tricky part here. Make sure that you don't use any file structure that depends on your computing environment.
+
+2. 
+```{r}
+library(ggplot2)
+t = read.csv("gapminder-5060.csv")
+usGap = subset(t, country == "United States")
+canGap = subset(t, country == "Canada")
+finGap = rbind(usGap, canGap)
+ggplot(data = finGap, aes(y = lifeExp, x = gdpPercap, group = country, color = country)) + geom_line()
+```
+
+3.\
+In my opinion images like [this](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvrzkj25a871bpq7t1ugcgmn9-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2018%2F08%2Fvisualization-of-example-linear-regression-in-r.png&f=1&nofb=1) are what I consider data science(image courtesy of r-crafts.org). Data science plays around the ideas of\
+1. Compilation of data\
+2. Analysis of data\
+3. Modeling of data\
+4. Prediction using models\
+5. Testing models\
+In current age data can play a big role in our lives especially with the internet at our fingertips. Data science is such a pivotal field in the progression of humanity. The image provided shows a linear regression model, which was built from first compiling a bunch of data, then filtering, training and polishing a model. While this may sound like a bunch of nonsense to an average person, it may fit into the daily life of an average person, things such as GPS, weather reports, baseball statistics, stock markets, etc. All of these things can have innumerable amounts of data, something which data science can turn into a simpler to understand and usable piece of information. I think that the image I chose is a simple but practical example of what data science is capable of, compiling data into workable tools to improve the every day lives of humanity. 
 
 
-For the submission: submit your solution in an **R Markdown file** and (just for insurance) submit the corresponding html (or Word) file with it. 
+
