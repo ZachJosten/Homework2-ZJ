@@ -37,7 +37,8 @@ library(ggplot2)
 t = read.csv("gapminder-5060.csv")
 usGap = subset(t, country == "United States")
 canGap = subset(t, country == "Canada")
-finGap = rbind(usGap, canGap)
+ausGap = subset(t, country == "Australia")
+finGap = rbind(usGap, canGap, ausGap)
 ggplot(data = finGap, aes(y = lifeExp, x = gdpPercap, group = country, color = country)) + geom_line()
 ```
 
