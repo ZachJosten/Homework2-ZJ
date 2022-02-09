@@ -14,13 +14,13 @@ knitr::opts_chunk$set(echo = TRUE)
 1.\
 Zach Josten - <https://github.com/ZachJosten/Homework2-ZJ>\
 \
-Craig Orman - <>\
+Craig Orman - <https://github.com/ArgentCode/Homewwork2-CO>\
 \
-Number of pull requests made - \
-Requests made to - <>\
+Number of pull requests made - 1\
+Requests made to - <https://github.com/ArgentCode/Homewwork2-CO>\
 \
-Number of pull requests accepted - \
-Requests accepted from - <>\
+Number of pull requests accepted - 1\
+Requests accepted from - <https://github.com/ArgentCode/Homework2-ZJ>\
 \
 Tips for Git/Github  
 1. If working on a fork, make sure to fetch upstream before you start working on the fork in case changes were made.  
